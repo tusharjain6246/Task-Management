@@ -38,11 +38,7 @@ const App = (props) =>{
   const [isOpen, setIsOpen] = useState(false);
   const[i, setI] = useState("1");
   const [delTask, setDelTask] = useState('');
-  // const [inputField , setInputField] = useState({
-  //       firstName: '',
-  //       title: '',
-  //       taskDescription: ''
-  //   })
+
     useEffect( async() => {
       console.log(id);
       try {
@@ -96,9 +92,6 @@ const App = (props) =>{
         priority: priority
     }
     setI((parseInt(i) + 1).toString());
-    // setTaskList(previousState=>({
-    // ...previousState.taskList, obj
-    // }));
     await setTaskList([...taskList, obj]);
   }
   // useEffect(()=>{
@@ -117,9 +110,6 @@ const App = (props) =>{
       // console.log("no id exist", el[el.length-1]);
       setTaskList(taskList.filter((item)=>(item.id !==el[el.length-1])));
     }
-
-    //console.log(el.childNodes[0].childNodes[0].innerText);
-    // console.log(arr);
   }
   const editTask = event=>{
     console.log("editing");
@@ -218,24 +208,6 @@ const App = (props) =>{
 
   }
 
-  // useEffect(()=>{
-  //   console.log(sortOn);
-  //   if(sortOn==='Priority'){
-  //     console.log("sort by priority");
-  //     var arr = taskList;
-  //     arr.sort((a,b)=>{
-  //       var a_high = a.priority==="High"?1:0;
-  //       var b_high = b.priority==="High"?1:0;
-  //       return b_high-a_high;
-  //     });
-  //     // console.log(arr);
-  //     setTaskList(arr);
-  //   }
-  //   // console.log(taskList);
-  // })
-
-  // render(){
-
   return(
     <div className="App">
       <div className="top">
@@ -290,15 +262,6 @@ const App = (props) =>{
                           var time = moment(item.deadline, "DD-MM-YYYY").fromNow();
                           var el = item.hasOwnProperty('_id')?item._id : item.id;
                           return (
-                            // <div className= {"item clearfix " + item.type} id={item.id}>
-                            //   <div className="item__description">{item.description}</div>
-                            //   <div className="right clearfix">
-                            //     <div className="item__value">{item.value}</div>
-                            //     <div className="item__delete">
-                            //       <button onClick={this.delete}  className="item__delete--btn"><i className="ion-ios-close-outline"></i></button>
-                            //     </div>
-                            //   </div>
-                            // </div>
 
                             <Grid id={item._id} className={item.id} textAlign = "center" verticalAlign = "middle" >
                             <Grid.Row>
@@ -353,12 +316,7 @@ const App = (props) =>{
                     )}
 
     </div>
-
-
-
-
     );
-  // }
 }
 
 export default App;

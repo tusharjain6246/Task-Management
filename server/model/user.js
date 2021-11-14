@@ -64,24 +64,6 @@ var userSchema = new mongoose.Schema({
         default:'High'
       }
   }]
-  // incomeItems:[{
-  //   type:{
-  //     type: String,
-  //     // required: true,
-  //   },
-  //   id:{
-  //     type: Number
-  //   },
-  //   description:{
-  //     type: String,
-  //     // required: true,
-  //     trim: true
-  //   },
-  //   value:{
-  //     type: Number,
-  //     // required: true,
-  //   }
-  // }],
 });
 
 // userSchema.methods.generate = ()=>{

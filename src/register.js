@@ -81,23 +81,7 @@ class Register extends React.Component {
           console.error(err);
           this.setState({errors:this.state.errors.concat(err),load: false});
       }
-      // await fetch('http://localhost:3001/user',options).then((res)=>{
-      //   if(res.status===200){
-      //     console.log(res.data());
-      //     console.log(res.status);
-      //     this.setState({load: false});
-      //   }
-      //   else {
-      //     let error;
-      //     let errors = [];
-      //     error = {message: "email is already in use"};
-      //     this.setState({errors:this.state.errors.concat(error),load: false});
-      //   }
-      //
-      // }).catch(err=>{
-      //   console.error(err);
-      //   this.setState({errors:this.state.errors.concat(err),load: false});
-      // });
+      
     }
 
   };

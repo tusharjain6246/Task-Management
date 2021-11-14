@@ -47,13 +47,6 @@ class Forget extends React.Component {
       event.preventDefault();
       const data = {'email':this.state.email};
       console.log(data);
-
-      // var min = 100000;
-      // var max = 999999;
-      // var o = Math.floor(Math.random() * (max - min + 1) ) + min;
-      // this.setState({otp:o});
-      // console.log(this.state.otp);
-
       try {
 
           let prom = await fetch(`http://localhost:3001/forget/${this.state.email}`);

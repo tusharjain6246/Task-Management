@@ -1,3 +1,9 @@
+Instructions:
+1. Download or clone the Git Repository
+2. Navigate to the root folder i.e Task-Management.
+3. Type npm install in the command line and wait for some time.
+4. Type npm start to run the app.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
